@@ -1,0 +1,14 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+/* media pour les écran de 0 à 576px */
+@media screen and (max-width:576px) {
+    html,body{font-size: 2vw;}
+}
+

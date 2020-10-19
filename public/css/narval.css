@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+/* ATTENTION : si on modifie ce fichier on doit exécuter "npm run watch" en console ! */
+
+footer,
+#title {
+  background-color: #396789;
+}
+
+#title,
+#text-first,
+#narval1-bis,
+#narval2-bis {
+  display: none;
+}
+
+#narval1 {
+  background-image: url("/img/narval1.jpg");
+  height: 70vh;
+  background-color: white;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  z-index: 1;
+}
+
+#narval2 {
+  background-image: url("/img/narval2.jpg");
+  height: 70vh;
+  background-color: white;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  z-index: 1;
+}
+
+.gallery-img-size {
+  width: 200px;
+  height: 100%;
+}
+
+/* media pour les écran de 0 à 576px */
+
+@media screen and (max-width: 1174px) {
+  #narval1,
+  #narval2 {
+    display: none;
+  }
+
+  #narval1-bis,
+  #narval2-bis {
+    display: block;
+  }
+}
+
