@@ -20,6 +20,11 @@ footer, #title {
     display: none;
 }
 
+#audio-icon {
+    color:white; 
+    cursor: pointer;
+}
+
 #narval1 {
     background-image: url("/img/narval1.jpg");
     @include img-parallaxe;

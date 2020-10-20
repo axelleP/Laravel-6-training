@@ -5,10 +5,9 @@
 @section('content')
     <h1 id="title" class="fixed-top m-0 py-2 text-white text-center border-bottom">Le Narval</h1>
 
-    <i id="audio-icon" class="fixed-top text-right m-2 fa fa-volume-off fa-3x" style="color:white; cursor: pointer;"></i>
+    <i id="audio-icon" class="fixed-top text-right m-2 fa fa-volume-off fa-3x"></i>
 
-    <audio
-        src="/media/narval.mp3" id="audio">
+    <audio src="/media/narval.mp3" id="audio">
             Your browser does not support the
             <code>audio</code> element.
     </audio>
