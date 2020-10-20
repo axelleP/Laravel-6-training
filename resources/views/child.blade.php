@@ -3,7 +3,17 @@
 @section('title', 'Page 1')
 
 @section('content')
-    <h1 id="title" class="m-0 py-2 text-white text-center border-bottom">Le Narval</h1>
+    <h1 id="title" class="fixed-top m-0 py-2 text-white text-center border-bottom">Le Narval</h1>
+
+    <i id="audio-icon" class="fixed-top text-right m-2 fa fa-volume-off fa-3x" style="color:white; cursor: pointer;"></i>
+
+    <audio
+        src="/media/narval.mp3" id="audio">
+            Your browser does not support the
+            <code>audio</code> element.
+    </audio>
+
+    <br/><br/>
 
     <div class="p-5">
         <span id="text-first">
@@ -114,6 +124,20 @@
             $('#light-gallery').lightGallery({
                 selector: '.item',
                 download: false//option de téléchargement des images désactivée
+            });
+
+            /* gestion de l'audio */
+            var audio = document.getElementById("audio");
+            $('#audio-icon').click(function () {
+                if (audio.paused) {
+                    audio.play();
+                } else {
+                    audio.pause();
+                }
+
+                //change l'icon de l'audio selon s'il est activé ou non
+                $(this).toggleClass('fa-volume-up');
+                $(this).toggleClass('fa-volume-off');
             });
         });
 
