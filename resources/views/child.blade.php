@@ -5,11 +5,11 @@
 @section('content')
     <h1 id="title" class="fixed-top m-0 py-2 text-white text-center border-bottom">Le Narval</h1>
 
-    <i id="audio-icon" class="fixed-top text-right m-2 fa fa-volume-off fa-3x"></i>
+    <i id="audio-icon" class="fixed-top text-right py-2 pr-4 fa fa-volume-off fa-3x"></i>
 
     <audio src="/media/narval.mp3" id="audio">
-            Your browser does not support the
-            <code>audio</code> element.
+        Your browser does not support the
+        <code>audio</code> element.
     </audio>
 
     <br/><br/>
@@ -130,13 +130,17 @@
             $('#audio-icon').click(function () {
                 if (audio.paused) {
                     audio.play();
-                } else {
-                    audio.pause();
-                }
 
-                //change l'icon de l'audio selon s'il est activé ou non
-                $(this).toggleClass('fa-volume-up');
-                $(this).toggleClass('fa-volume-off');
+                    //change l'icon de l'audio selon s'il est activé ou non
+                    $(this).addClass('fa-volume-up');
+                    $(this).removeClass('fa-volume-off');
+
+                } else if (audio.played) {
+                    audio.pause();
+
+                    $(this).addClass('fa-volume-off');
+                    $(this).removeClass('fa-volume-up');
+                }
             });
         });
 
