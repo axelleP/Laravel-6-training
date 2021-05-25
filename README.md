@@ -1,3 +1,11 @@
+# Training
+I used :
+- Laravel 6
+- jQuery 3.5.1
+- jQuery paroller : parallax effect
+- lightgallery - npm : image gallery management
+- Font Awesome : image library
+
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">
